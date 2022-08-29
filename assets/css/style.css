@@ -1559,6 +1559,13 @@
   /********/
 
   /********/
+   .citrus-explore-food-area {
+      display: block;
+      padding-top: 40px;
+      padding-bottom: 56px;
+      background: #fff;
+    }
+
   .citrus-explore-food-section-flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2794,6 +2801,7 @@
       margin-bottom: 30px;
     }
 
+     
     .citrus-explore-food-single-item {
       padding: 10px;
       flex: 0 0 48%;
