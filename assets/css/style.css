@@ -1863,13 +1863,16 @@
     align-items: center;
   }
 
-  .upgrade-video {
-   
+  .upgrade-video img {
+    max-width: 100%;
+    margin-top: -5%;
   }
 
   .upgrade-video {
     position: relative;
-    margin: -20% 0;
+    margin: 0 50px;
+    flex: 0 0 40%;
+    padding: 0;
   }
 
   .upgrade-video>video {
@@ -1893,7 +1896,7 @@
 
   .upgrade-content>h4 {
     color: #000;
-    font-size: 25px;
+    font-size: 28px;
     font-weight: bold;
     font-family: "PetcoCircularTT-Bold", arial !important;
     display: block;
@@ -2628,9 +2631,7 @@
       overflow: hidden;
     }
 
-    .upgrade-video {
-      height: 300px !important;
-    }
+
 
     .upgrade-video>iframe {
       width: 100%;
@@ -2642,27 +2643,32 @@
   }
 
   @media all and (max-width: 575px) {
-    .citrus_cta_btn,
-    .citrus_cta_btn2,
-    .citrus_cta_btn3 {
-      border: none !important;
-      text-decoration: underline !important;
-      text-transform: capitalize !important;
-      top: unset !important;
-      bottom: 35px !important;
-      margin: 0 !important;
-      font-size: 16px !important;
-      left: 50% !important;
-      right: 50% !important;
-      transform: translate(-50%, 0);
-      padding: 0 !important;
-      width: 100% !important;
-    }
-
+   .citrus_cta_btn {
+        background: none !important;
+        color: #001952 !important;
+        padding: 0 4px !important;
+        text-decoration: underline !important;
+        text-transform: capitalize !important;
+        margin: 0  !important;
+        display: content !important
+      }
     
 
+      .upgrade-main-flex {
+        display: block !important;
+        margin: 0 !important;
+        text-align: center !important;
+      }
+      .upgrade-content {
+        padding: 0 4% !important;
+        text-align: center !important;
+      }
     .upgrade-video {
       margin-top: 20px;
+    }
+
+    .upgrade-content>h4 {
+      font-size: 18px;
     }
 
     .citrus-tab-left-img {
@@ -2862,14 +2868,12 @@
     }
 
     .upgrade-content>p {
-      width: 75%;
       margin: 0 auto;
+      font-size: 13px;
+      width: 80%;
     }
 
-    .upgrade-video-area {
-      padding-top: 63px;
-      padding-bottom: 50px;
-    }
+    
 
     .desktop-view {
       display: none;
@@ -5280,6 +5284,28 @@
   }
 
   @media all and (max-width: 575px) {
+    #image-carousel .splide__slide img {
+      width: auto;
+      height: 450px;
+    }
+
+    .citrus_weruva_logo {
+      top: 2% !important;
+      left: 50% !important;
+      transform: translate(-50%, 0);
+      width: 100px !important;
+      height: 100px !important;
+    }
+
+    .citrus_pov_content {
+      top: 120px !important;
+      left: 50% !important;
+      transform: translate(-50%, 0);
+      width: 80% !important;
+      text-align: center !important;
+
+    }
+    
     .citrus-btm-main-overly-des p {
       width: 100%;
     }
@@ -5292,6 +5318,9 @@
       padding-top: 25px;
       padding-bottom: 20px;
     }
+
+
+   
 
     .citrus-wet-cat-left {
       padding-bottom: 30px;
