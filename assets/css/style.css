@@ -1954,15 +1954,18 @@ p {
   cursor: pointer;
 }
 
+.citrus-meet-section__tab-content {
+  display: flex;
+}
 .citrus-tab-left-img {
   display: block;
-  width: 300px;
-  float: left;
   color: #000;
+  flex: 0 0 300px;
+  margin: 0 10px 0 0;
 }
 
 .citrus-tab-left-img .citrus-content {
-  padding: 20px 20px;
+  padding: 15px;
   text-align: center;
 }
 
@@ -2677,10 +2680,21 @@ p {
     font-size: 18px;
   }
 
-  .citrus-tab-left-img {
-    width: 50%;
-    height: auto !important;
+
+  .citrus-meet-section__tab-content {
+    display: block !important;
   }
+  .citrus-tab-left-img {
+    flex: 0 0 100%;
+    margin: 0 10px 0 0;
+  }
+
+  .citrus-tab-right {
+     flex: 0 0 100%;
+    margin: 0 10px 0 0;
+  }
+
+ 
 
   .citrus-tab-left-img .citrus-content {
     padding: 5px !important;
@@ -2793,8 +2807,8 @@ p {
 
   .benefits-single-item {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 40%;
-    flex: 0 0 40%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
     margin-bottom: 30px;
   }
 
