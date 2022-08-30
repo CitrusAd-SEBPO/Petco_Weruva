@@ -1492,6 +1492,9 @@ p {
 }
 /********/
 
+
+
+
 /********/
 .bestselling-section-flex {
   display: -webkit-box;
@@ -1518,7 +1521,7 @@ p {
 }
 
 .bestselling-single-item {
-  text-align: center;
+  text-align: left;
   margin: 10px;
   padding: 0;
   width: 350px;
@@ -1550,12 +1553,12 @@ p {
 }
 
 .bestselling-single-item a {
+  color: #001952;
+  font-size: 16px;
   display: block;
-  font-size: 14px;
-  margin: 20px 0 10px 0;
-  color: #011952;
-  font-weight: 600;
+  font-family: "PetcoCircularTT-Bold", arial !important;
   text-decoration: underline;
+  padding: 5px;
 }
 /********/
 
@@ -1644,7 +1647,7 @@ p {
 }
 
 .benefits-single-item img {
-  max-width: 150px;
+  max-width: 185px;
   width: 100%;
   height: auto;
 }
@@ -5662,6 +5665,35 @@ p {
   }
 }
 
+/***** slider navigation css start ********/
+
+.splide__pagination {
+      bottom: 0;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+      padding: 0 1em;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.4);
+      z-index: 1;
+      width: 100px;
+      height: 30px;
+      border-radius: 5px 5px 0 0;
+      border-bottom: 0
+    }
+
+    .splide__pagination__page {
+      border: 1px solid #00205b;
+      height: 12px;
+      width: 12px
+    }
+
+    .splide__pagination__page.is-active {
+      background-color: #00205b;
+      -webkit-transform: scale(1);
+      transform: scale(1)
+    }
+/***** slider navigation css end ********/
 
 /***** citrus-modal css start *****/
 
@@ -5732,5 +5764,28 @@ p {
 /***** modal css end *****/
 
 
+/******* splide__arrow ********/
+.splide__arrow {
+    background-color: unset;
+        -ms-flex-align: center;
+        align-items: center;
+        background: transparent;
+        border: 1px solid #122359;
+        border-radius: 50%;
+        cursor: pointer;
+        display: -ms-flexbox;
+        display: flex;
+        height: 3.2em;
+        -ms-flex-pack: center;
+        justify-content: center;
+        opacity: 1;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3.2em;
+        z-index: 1;
+    }
 
+/****************/
 /***********/
