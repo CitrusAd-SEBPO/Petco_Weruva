@@ -1852,7 +1852,7 @@ p {
 }
 
 .upgrade-video-area {
-  margin: 100px 0;
+  margin: 100px 0 0 0;
   padding: 0;
   background: #00ac6933;
   background-image: url(../images/citrus_weruva_bg_light_green.jpg);
@@ -1876,7 +1876,7 @@ p {
 
 .upgrade-video img {
   max-width: 100%;
-  margin-top: -5%;
+  margin-top: -20%;
 }
 
 .upgrade-video {
@@ -2688,6 +2688,10 @@ p {
     margin-top: 20px;
   }
 
+  .upgrade-video img {
+    margin-top: -5%;
+  }
+
   .upgrade-content > h4 {
     font-size: 18px;
   }
@@ -2825,10 +2829,18 @@ p {
 
   .benefits-single-item {
     -webkit-box-flex: 0;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    margin-bottom: 30px;
+  }
+  
+  .benefits-icon-flex.second .benefits-single-item {
+    -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     margin-bottom: 30px;
   }
+
 
   .citrus-explore-food-single-item {
     padding: 10px;
