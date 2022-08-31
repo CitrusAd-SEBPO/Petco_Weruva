@@ -1555,7 +1555,7 @@ p {
   display: block;
   font-family: "PetcoCircularTT-Bold", arial !important;
   text-decoration: underline;
-  padding: 5px;
+  padding: 5px 0;
 }
 /********/
 
@@ -2709,6 +2709,15 @@ p {
     padding: 5px !important;
   }
 
+  .bestselling-single-item p {
+    min-height: auto;
+    padding-bottom: 10px;
+  }
+
+  .citrus-explore-food-section-flex {
+    flex-wrap:initial;
+  }
+
   .chart-img {
     overflow-x: auto;
   }
@@ -2823,7 +2832,7 @@ p {
 
   .citrus-explore-food-single-item {
     padding: 10px;
-    flex: 0 0 48%;
+    flex: 0 0 100%;
   }
 
   .transition-pet-inner-img {
