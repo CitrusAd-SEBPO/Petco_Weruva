@@ -1269,8 +1269,6 @@ p {
   transition: 0.6s;
 }
 
-
-
 .slider-single-item.slider-single-item2 .slider-content > h1 {
   color: #fff;
   position: relative;
@@ -1397,7 +1395,6 @@ p {
   overflow: hidden;
   padding-top: 65px;
   padding-bottom: 40px;
-  background: #fff;
 }
 
 .citrus-mt-10 {
@@ -1492,9 +1489,6 @@ p {
 }
 /********/
 
-
-
-
 /********/
 .bestselling-section-flex {
   display: -webkit-box;
@@ -1545,11 +1539,14 @@ p {
 }
 
 .bestselling-single-item p {
-  color: #000;
-  font-size: 12px;
-  padding: 5px;
-  line-height: 1.2;
-  min-height: 75px;
+  font-size: 13px;
+  color: #333333;
+  min-height: 82px;
+  display: block;
+  margin-top: 18px;
+  font-family: "PetcoCircularTT-Regular", arial !important;
+  font-weight: normal;
+  line-height: 1.4;
 }
 
 .bestselling-single-item a {
@@ -1608,7 +1605,7 @@ p {
 
 .citrus-explore-food-single-item h1 {
   color: #011952;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "PetcoCircularTT-Bold", arial !important;
   font-weight: 600;
   padding: 5px;
@@ -1617,17 +1614,17 @@ p {
 
 .citrus-explore-food-single-item p {
   color: #000;
-  font-size: 15px;
+  font-size: 16px;
   padding: 10px;
   line-height: 1.4;
 }
 
 .citrus-explore-food-single-item a {
-  display: block;
-  font-size: 14px;
   margin: 20px 0 10px 0;
-  color: #011952;
-  font-weight: 600;
+  color: #001952;
+  font-size: 16px;
+  display: block;
+  font-family: "PetcoCircularTT-Bold", arial !important;
   text-decoration: underline;
 }
 /********/
@@ -1666,25 +1663,25 @@ p {
 }
 
 .benefits-single-item h1 {
-  color: #011952;
-  font-size: 20px;
+  color: #000000;
+  font-size: 18px;
   font-family: "PetcoCircularTT-Bold", arial !important;
   font-weight: 600;
   padding: 7px 15px;
 }
 
 .benefits-single-item p {
-  color: #011952;
+  color: #000000;
   font-size: 16px;
   padding: 7px 15px;
 }
 
 .benefits-single-item a {
-  display: block;
-  font-size: 14px;
   margin: 20px 0 10px 0;
-  color: #011952;
-  font-weight: 600;
+  color: #001952;
+  font-size: 16px;
+  display: block;
+  font-family: "PetcoCircularTT-Bold", arial !important;
   text-decoration: underline;
 }
 
@@ -1858,6 +1855,10 @@ p {
   margin: 100px 0;
   padding: 0;
   background: #00ac6933;
+  background-image: url(../images/citrus_weruva_bg_light_green.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center left;
   color: #000;
 }
 
@@ -1906,16 +1907,18 @@ p {
 
 .upgrade-content > h4 {
   color: #000;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: bold;
   font-family: "PetcoCircularTT-Bold", arial !important;
   display: block;
-  padding-bottom: 21px;
+  padding-bottom: 20px;
 }
 
 .upgrade-content > p {
-  padding-bottom: 41px;
-  color: #521f88;
+  padding-bottom: 40px;
+  color: #000;
+  font-size: 16px;
+  font-family: "PetcoCircularTT-Regular", arial !important;
 }
 
 .upgrade-content .common-slider-btn > a {
@@ -1993,7 +1996,11 @@ p {
 }
 
 .citrus-bg-sky {
-  background-color: #ccf0fa;
+  background: #ccf0fa;
+  background-image: url(../images/citrus_weruva_bg_sky.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center left;
 }
 
 .citrus-tab-left-img img {
@@ -2326,9 +2333,6 @@ p {
 .citrus-footer-text a {
   color: #521f88;
 }
-
-
-
 
 @media all and (min-width: 1440px) {
   .slider-banner-img {
@@ -2688,7 +2692,6 @@ p {
     font-size: 18px;
   }
 
-
   .citrus-meet-section__tab-content {
     display: block !important;
   }
@@ -2698,11 +2701,9 @@ p {
   }
 
   .citrus-tab-right {
-     flex: 0 0 100%;
+    flex: 0 0 100%;
     margin: 0 10px 0 0;
   }
-
- 
 
   .citrus-tab-left-img .citrus-content {
     padding: 5px !important;
@@ -5415,7 +5416,7 @@ p {
     bottom: 0;
     position: absolute;
     left: 50% !important;
-     transform: translate(70%, 0);
+    transform: translate(70%, 0);
   }
 
   .citrus_weruva_logo {
@@ -5668,31 +5669,31 @@ p {
 /***** slider navigation css start ********/
 
 .splide__pagination {
-      bottom: 0;
-      left: 50%;
-      -webkit-transform: translate(-50%, 0);
-      transform: translate(-50%, 0);
-      padding: 0 1em;
-      position: absolute;
-      background-color: rgba(255, 255, 255, 0.4);
-      z-index: 1;
-      width: 100px;
-      height: 30px;
-      border-radius: 5px 5px 0 0;
-      border-bottom: 0
-    }
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  padding: 0 1em;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 1;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 0;
+}
 
-    .splide__pagination__page {
-      border: 1px solid #00205b;
-      height: 12px;
-      width: 12px
-    }
+.splide__pagination__page {
+  border: 1px solid #00205b;
+  height: 12px;
+  width: 12px;
+}
 
-    .splide__pagination__page.is-active {
-      background-color: #00205b;
-      -webkit-transform: scale(1);
-      transform: scale(1)
-    }
+.splide__pagination__page.is-active {
+  background-color: #00205b;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
 /***** slider navigation css end ********/
 
 /***** citrus-modal css start *****/
@@ -5760,32 +5761,30 @@ p {
   border-radius: 0 7px 0 0;
 }
 
-
 /***** modal css end *****/
-
 
 /******* splide__arrow ********/
 .splide__arrow {
-    background-color: unset;
-        -ms-flex-align: center;
-        align-items: center;
-        background: transparent;
-        border: 1px solid #122359;
-        border-radius: 50%;
-        cursor: pointer;
-        display: -ms-flexbox;
-        display: flex;
-        height: 3.2em;
-        -ms-flex-pack: center;
-        justify-content: center;
-        opacity: 1;
-        padding: 0;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 3.2em;
-        z-index: 1;
-    }
+  background-color: unset;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #122359;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3.2em;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 1;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3.2em;
+  z-index: 1;
+}
 
 /****************/
 /***********/
