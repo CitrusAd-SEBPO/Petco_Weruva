@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Stylesheet -->
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
     <style>
         .citrus-full-wrapper * {
             -webkit-box-sizing: border-box;
@@ -78,6 +78,13 @@
             list-style-type: none !important;
             margin: 0;
             position: relative;
+        }
+    
+        .citrus_weruva_carousel{
+            width: 100%;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
         }
     
         .splide__slide img,
@@ -1231,7 +1238,7 @@
     
         .citrus-upgrade-content {
             text-align: center;
-            padding: 100px 0;
+            /* padding: 100px 0; */
         }
     
         .citrus-upgrade-content>h4 {
@@ -1489,8 +1496,8 @@
     
             .citrus-upgrade-video {
                 -webkit-box-flex: 0;
-                -ms-flex: 0 0 100%;
-                flex: 0 0 100%;
+                /* -ms-flex: 0 0 100%; */
+                /* flex: 0 0 100%; */
                 margin-top: 20px;
             }
     
@@ -1501,8 +1508,8 @@
             .citrus-upgrade-content {
                 text-align: center;
                 -webkit-box-flex: 0;
-                -ms-flex: 0 0 100%;
-                flex: 0 0 100%;
+                /* -ms-flex: 0 0 100%; */
+                /* flex: 0 0 100%; */
                 margin-top: 40px;
                 margin-bottom: 40px;
             }
@@ -1530,7 +1537,11 @@
             }
     
             .citrus-upgrade-video-area {
-                padding-bottom: 100px;
+                /* padding-bottom: 100px; */
+            }
+    
+            .citrus-full-wrapper .citrus-upgrade-video-area .show-video iframe {
+                min-height: 230px !important;
             }
     
             .citrus-tab__content .splide__slide {
@@ -1568,6 +1579,9 @@
             .citrus_pov_content p {
                 font-size: 14px !important;
                 margin: 5px 0 !important;
+            }
+            .citrus-upgrade-video {
+                margin-top: -60px;
             }
         }
     
@@ -2781,18 +2795,19 @@
         }
     
         /* Video Popup */
-        .citrus-explore-food-single-item .citrus-yt-video{
+        .citrus-full-wrapper .citrus-yt-video{
             position: relative;
         }
     
-        .citrus-explore-food-single-item .citrus-yt-video button,
-        .citrus-explore-food-single-item .citrus-yt-video button:focus-visible{
+        .citrus-full-wrapper .citrus-yt-video button,
+        .citrus-full-wrapper .citrus-yt-video button:focus-visible{
             background: none;
             border: none;
             outline: none;
             cursor: pointer;
+            padding: 0;
         }
-        .citrus-explore-food-single-item .show-video{
+        .citrus-full-wrapper .show-video{
             display: none;
             position: absolute;
             top: 0;
@@ -2801,8 +2816,9 @@
             box-shadow: 2px 2px 10px 0px rgb(166 161 161 / 85%);
             padding: 10px;
             border-radius: 10px;
+            width: 100%;
         }
-        .citrus-explore-food-single-item .show-video span{
+        .citrus-full-wrapper .show-video span{
             position: absolute;
             right: 5px;
             top: 5px;
@@ -2820,14 +2836,30 @@
             padding: 1px 0 0;
             cursor: pointer;
         }
-        .citrus-explore-food-single-item .show-video span:hover{
+        .citrus-full-wrapper .show-video span:hover{
             color: #fff;
             background: #e4425c;
             border: 1px solid #e4425c;
         }
-        .citrus-explore-food-single-item .show-video iframe{
+        .citrus-full-wrapper .show-video iframe{
             width: 100%;
             min-height: 180px;
+        }
+    
+        .citrus-full-wrapper .education-single-item .show-video iframe{
+            min-height: 225px;
+        }
+    
+        .citrus-full-wrapper .citrus-upgrade-video-area .show-video{
+            top: -50%;
+        }
+    
+        .citrus-full-wrapper .citrus-upgrade-video-area .show-video iframe{
+            min-height: 320px;
+        }
+    
+        .citrus-full-wrapper .citrus-bg-sky .show-video iframe{
+            min-height: 270px;
         }
     
         .citrus-benefits-single-item .citrus-yt-video{
@@ -2874,6 +2906,11 @@
             background: #e4425c;
             border: 1px solid #e4425c;
         }
+        .citrus-benefits-single-item .show-video iframe{
+            width: 100%;
+            min-height: 180px;
+        }
+    
         .citrus-benefits-single-item .show-video iframe{
             width: 100%;
             min-height: 180px;
@@ -2981,7 +3018,7 @@
     
         @media all and (max-width: 991px) {
             .citrus_cta_btn {
-                padding: 7px 30px;
+                padding: 7px 25px;
                 font-size: 12px;
                 line-height: 12px;
                 top: 55%;
@@ -3683,41 +3720,54 @@
                     <h2>Why cats need wet food</h2>
                 </div>
                 <div class="education-section-flex citrus-second">
-                    <!-- single item -->
+                    <!-- single item 01 -->
                     <div class="education-single-item ">
-                        <a class="citrus-yt-video" href="https://www.youtube.com/embed/A4DS99kO8xY" target="_blank"
-                            manual_cm_sp="sponsoredbrandpage:weruva:whycatsneedwetfood:1:picky:video">
-                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus_weruva_picky"
-                                alt="Picky cats video" />
-                        </a>
+                        <div class="citrus-yt-video">
+                            <button onclick="show_video10()">
+                                <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus_weruva_picky"
+                            alt="Picky cats video" />
+                            </button>
+                            <div class="show-video" id="show_video10">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/A4DS99kO8xY" title="It's Pet Food Seriously Ep 3: Picky Cats" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <span onclick="show_video10()">&times;</span>
+                            </div>
+                        </div>
                         <div class="citrus-education-content">
                             <h1>Picky cats</h1>
                             <p>A cat’s tongue is very sensitive. Weruva offers a variety of textures and flavors for
                                 even the pickiest of cats.</p>
                         </div>
                     </div>
-                    <!-- single item -->
+                    <!-- single item 02 -->
                     <div class="education-single-item">
-                        <a class="citrus-yt-video" href="https://www.youtube.com/embed/VzjE7FkpXAg" target="_blank"
-                            manual_cm_sp="sponsoredbrandpage:weruva:whycatsneedwetfood:2:overweight:video"
-                            onclick="clickTrackLink(this);">
-                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus_weruva_over_weight"
-                                alt="Overweight cats video" />
-                        </a>
+                        <div class="citrus-yt-video">
+                            <button onclick="show_video11()">
+                                <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus_weruva_over_weight"
+                            alt="Overweight cats video" />
+                            </button>
+                            <div class="show-video" id="show_video11">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VzjE7FkpXAg" title="It's Pet Food Seriously Ep 4: Cats and Carbs - A Deep Dive" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <span onclick="show_video11()">&times;</span>
+                            </div>
+                        </div>
                         <div class="citrus-education-content">
                             <h1>Weight management</h1>
                             <p>Cats can’t effectively process carbohydrates, so Weruva recipes are high in protein and
                                 low in carbs and fats.</p>
                         </div>
                     </div>
-                    <!-- single item -->
+                    <!-- single item 03 -->
                     <div class="education-single-item">
-                        <a class="citrus-yt-video" href="https://www.youtube.com/embed/R5_g1iPplik" target="_blank"
-                            manual_cm_sp="sponsoredbrandpage:weruva:whycatsneedwetfood:3:urinaryhealth:video"
-                            onclick="clickTrackLink(this);">
-                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus_weruva_urinary_health"
+                        <div class="citrus-yt-video">
+                            <button onclick="show_video12()">
+                                <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus_weruva_urinary_health"
                                 alt="Urinary health video" />
-                        </a>
+                            </button>
+                            <div class="show-video" id="show_video12">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/R5_g1iPplik" title="Weruva UT Health" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <span onclick="show_video12()">&times;</span>
+                            </div>
+                        </div>
                         <div class="citrus-education-content">
                             <h1>Urinary tract health</h1>
                             <p>Weruva foods are made with lean cuts of boneless meat or fish to help maintain a healthy
@@ -3725,14 +3775,18 @@
                         </div>
                     </div>
     
-                    <!-- single item -->
+                    <!-- single item 04 -->
                     <div class="education-single-item">
-                        <a class="citrus-yt-video" href="https://www.youtube.com/embed/utOrYj5mckc" target="_blank"
-                            manual_cm_sp="sponsoredbrandpage:weruva:whycatsneedwetfood:4:hydration:video"
-                            onclick="clickTrackLink(this);">
-                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus_weruva_hydration"
+                        <div class="citrus-yt-video">
+                            <button onclick="show_video13()">
+                                <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus_weruva_hydration"
                                 alt="Hydration video" />
-                        </a>
+                            </button>
+                            <div class="show-video" id="show_video13">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/utOrYj5mckc" title="It's Pet Food Seriously Ep 5: Your Cat Has A Drinking Problem" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <span onclick="show_video13()">&times;</span>
+                            </div>
+                        </div>
                         <div class="citrus-education-content">
                             <h1>Hydration</h1>
                             <p>Cats are desert creatures. All Weruva food has <span
@@ -4106,14 +4160,17 @@
                     <!--=================== tab content ===================-->
                     <div class="citrus-meet-section__tab-content">
                         <div class="citrus-tab-left-img citrus-bg-sky">
-                            <a class="citrus-yt-video" href="https://www.youtube.com/embed/5Kha5_ZxfSA" target="_blank"
-                                /shop/en/petcostore"
-                                manual_cm_sp="sponsoredbrandpage:weruva:bestsellingdog:1:dogsneedwetfood:video"
-                                onclick="clickTrackLink(this);">
-                                <img class="citrus-cursor"
+                            <div class="citrus-yt-video">
+                                <button onclick="show_video14()">
+                                    <img class="citrus-cursor"
                                     src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus_weruva_dog_wet_food"
                                     alt="Play video." />
-                            </a>
+                                </button>
+                                <div class="show-video" id="show_video14">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ozn7jsZuAJk" title="Soulistic Short Training Modules - All lines" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <span onclick="show_video14()">&times;</span>
+                                </div>
+                            </div>
     
                             <div class="citrus-content">
                                 <h2>Dogs need wet food</h2>
@@ -4244,16 +4301,19 @@
             <div class="citrus-custom-container citrus-video-container">
                 <div class="citrus-upgrade-main-flex">
                     <div class="citrus-upgrade-video">
-                        <a class="citrus-yt-video"
-                            href="https://www.youtube.com/embed/Cknmh4n75TY"
-                            manual_cm_sp="sponsoredbrandpage:weruva:weruvassustainalberecy:1:welcometowerucycle:video"
-                            onclick="clickTrackLink(this);">
-                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus_weruva_youtube_footer"
+                        <div class="citrus-yt-video citrus-weruva-video-col">
+                            <button onclick="show_video15()">
+                                <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus_weruva_youtube_footer"
                                 alt="100 percent icon">
-                        </a>
+                            </button>
+                            <div class="show-video" id="show_video15">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Cknmh4n75TY" title="WE RU CYCLE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <span onclick="show_video15()">×</span>
+                            </div>
+                        </div>
                     </div>
     
-                    <div class="citrus-upgrade-content">
+                    <div class="citrus-upgrade-content citrus-weruva-video-col">
                         <h4><b>Weruva’s sustainable recycling program</b></h4>
                         <p>We Ru Cycle is Weruva’s own program for reusing and repurposing Weruva pet food pouches.</p>
                     </div>
@@ -4448,7 +4508,7 @@
     
         let jump = 1;
     
-        let interval = 500000;
+        let interval = 5000;
     
         let time;
     
@@ -4571,7 +4631,7 @@
                 citrus_weruva_carouselInner.prepend(citrus_weruva_carouselInner.lastElementChild);
             };
     
-            citrus_weruva_carousel.style.justifyContent = 'weruvapet-flex-start';
+            citrus_weruva_carousel.style.justifyContent = 'flex-start';
             citrus_weruva_carouselInner.style.transform = `translateX(-${step}%)`;
         };
     
@@ -4580,7 +4640,7 @@
                 direction = 1;
                 citrus_weruva_carouselInner.append(citrus_weruva_carouselInner.firstElementChild);
             };
-            citrus_weruva_carousel.style.justifyContent = 'weruvapet-flex-end'
+            citrus_weruva_carousel.style.justifyContent = 'flex-end'
             citrus_weruva_carouselInner.style.transform = `translateX(${step}%)`;
         };
     
@@ -4673,6 +4733,130 @@
             }
         }
     </script>
+
+    <script>
+        function show_video1() {
+            var x = document.getElementById("show_video1");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
+        function show_video2() {
+            var x = document.getElementById("show_video2");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
+        function show_video3() {
+            var x = document.getElementById("show_video3");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
+        function show_video4() {
+            var x = document.getElementById("show_video4");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
+        function show_video5() {
+            var x = document.getElementById("show_video5");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
+        function show_video6() {
+            var x = document.getElementById("show_video6");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
+        function show_video7() {
+            var x = document.getElementById("show_video7");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
+        function show_video8() {
+            var x = document.getElementById("show_video8");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
+        function show_video9() {
+            var x = document.getElementById("show_video9");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
+        function show_video10() {
+            var x = document.getElementById("show_video10");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
+        function show_video11() {
+            var x = document.getElementById("show_video11");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
+        function show_video12() {
+            var x = document.getElementById("show_video12");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
+        function show_video13() {
+            var x = document.getElementById("show_video13");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
+        function show_video14() {
+            var x = document.getElementById("show_video14");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
+        function show_video15() {
+            var x = document.getElementById("show_video15");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
+    </script>
+    
 
 </body>
 
